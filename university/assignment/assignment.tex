@@ -1,0 +1,61 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+\usepackage[parfill]{parskip}			% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+% MyPackages
+\usepackage[hidelinks]{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath} % for math mode
+\usepackage{lipsum} % for generating Lorem Ipsum text
+% MyPackages
+
+%SetFonts
+% Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+\renewcommand{\rmdefault}{ppl} % rm
+\linespread{1.05}        % Palatino needs more leading
+\usepackage[scaled]{helvet} % ss
+\usepackage{courier} % tt
+\usepackage{euler} % math
+\usepackage{eulervm} % a better implementation of the euler package (not in gwTeX)
+\normalfont
+\usepackage[T1]{fontenc}
+%SetFonts
+
+\title{Assigment Template}
+\author{Student Name\\\small Student Number}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+
+\section{Lorem Ipsum}
+
+\lipsum[1-2]
+
+\newpage
+
+\section{Dolor Sit Amet}
+
+\subsection{Math mode}
+
+\begin{equation}
+    \int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+\end{equation}
+
+\subsection{Roman (Serif) font}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula neque sed purus vestibulum, eget ultrices urna pulvinar.
+
+\subsection{Sans Serif font}
+
+\textsf{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula neque sed purus vestibulum, eget ultrices urna pulvinar.}
+
+\subsection{Typewriter font}
+
+\texttt{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula neque sed purus vestibulum, eget ultrices urna pulvinar.}
+
+\end{document}  
