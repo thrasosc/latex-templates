@@ -6,6 +6,7 @@
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 % MyPackages
+\usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{amssymb}
 \usepackage{amsmath} % for math mode
@@ -23,6 +24,14 @@
 \normalfont
 \usepackage[T1]{fontenc}
 %SetFonts
+
+% Set up hyperref to use the defined colours
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=red
+}
 
 \title{Assigment Template}
 \author{Student Name\\\small Student Number}
