@@ -1,4 +1,4 @@
-\documentclass[11pt, oneside]{article}
+\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
 \geometry{letterpaper}
 \usepackage[parfill]{parskip}
@@ -9,13 +9,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage{lipsum} % For Lorem Ipsum text
+\usepackage{lipsum}
 
 % Font setup
-\usepackage{mathpazo} % Palatino for text and math
-\linespread{1.05}      % Palatino needs more leading
+\usepackage{mathpazo}       % Palatino for text and math
+\linespread{1.05}           % Palatino needs more leading
 \usepackage[scaled]{helvet} % Helvetica for sans-serif
-\usepackage{courier}   % Courier for typewriter font
+\usepackage{courier}        % Courier for typewriter font
 \normalfont
 \usepackage[T1]{fontenc}
 
@@ -30,19 +30,17 @@
 % Title Information
 \title{Your Document Title}
 \author{Your Name Here\\ Your Student ID Here}
-\date{\today}  % Automatically sets the current date. You can replace this with a fixed date if needed.
+\date{\today}
 
 \begin{document}
 \maketitle
 
-\tableofcontents % Generate table of contents
+\tableofcontents
 \newpage
 
 \section{Section Title}
 % Add your content here.
 \lipsum[2-4]  % Placeholder Lorem Ipsum text for filler content.
-
-\newpage
 
 \section{Mathematics Example}
 Here’s an example of some inline math: $a^2 + b^2 = c^2$.
@@ -52,8 +50,6 @@ And here’s an equation on its own:
 \[
 E = mc^2
 \]
-
-\newpage
 
 \section{Conclusion}
 This section can contain your concluding remarks or summary of the assignment.
