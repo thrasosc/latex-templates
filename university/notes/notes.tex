@@ -9,6 +9,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{framed}
 \usepackage{lipsum}
 
 % Font setup
@@ -29,6 +30,17 @@
 
 % Set graphics properties
 \setkeys{Gin}{width=0.7\textwidth}
+
+% Custom definition environment
+\newenvironment{definition}[1][Definition]{
+  \noindent
+  \begin{framed}
+    \begin{center}
+      \underline{\textit{\textbf{#1}}}
+    \end{center}
+  }{
+  \end{framed}
+}
 
 % Title Information
 \title{Your Document Title}
