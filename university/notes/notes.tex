@@ -1,26 +1,48 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,a4paper]{scrartcl}
+
+% Page geometry and layout
 \usepackage[margin=1in]{geometry}
-\geometry{letterpaper}
 \usepackage[parfill]{parskip}
+
+% Essential packages
 \usepackage{graphicx}
-\usepackage{float}
 \usepackage[svgnames]{xcolor}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{framed}
-\usepackage{lipsum}
+
+% Theorem Environments
+\theoremstyle{definition} % Ensures normal (upright) text
+\newtheorem{definition}{Definition}[subsection]
+\newtheorem{example}{Example}[subsection]
+\newtheorem{theorem}{Theorem}[subsection]
+
+% Redefine the existing theorem environments to be framed
+\let\olddefinition\definition
+\let\endolddefinition\enddefinition
+\renewenvironment{definition}
+  {\begin{framed}\olddefinition}
+  {\endolddefinition\end{framed}}
+
+\let\oldexample\example
+\let\endoldexample\endexample
+\renewenvironment{example}
+  {\begin{framed}\oldexample}
+  {\endoldexample\end{framed}}
+
+\let\oldtheorem\theorem
+\let\endoldtheorem\endtheorem
+\renewenvironment{theorem}
+  {\begin{framed}\oldtheorem}
+  {\endoldtheorem\end{framed}}
 
 % Font setup
-\usepackage{mathpazo}       % Palatino for text and math
-\linespread{1.05}           % Palatino needs more leading
-\usepackage[scaled]{helvet} % Helvetica for sans-serif
-\usepackage{courier}        % Courier for typewriter font
-\normalfont
-\usepackage[T1]{fontenc}
+\usepackage{kpfonts}  % Elegant fonts with complete math support
 
-% Set up hyperref to use the defined colours
+% Hyperlinks
+\usepackage[hidelinks]{hyperref}
 \hypersetup{
   colorlinks=true,
   linkcolor=black,
@@ -32,8 +54,9 @@
 \setkeys{Gin}{width=0.75\textwidth}
 
 % Title Information
-\title{Your Document Title}
-\author{Your Name Here\\ Your Student ID Here}
+\title{Course Title}
+\subtitle{Course Notes}
+\author{Your Name}
 \date{\today}
 
 \begin{document}
@@ -42,20 +65,6 @@
 \tableofcontents
 \newpage
 
-\section{Section Title}
-% Add your content here.
-\lipsum[2-4]  % Placeholder Lorem Ipsum text for filler content.
-
-\section{Mathematics Example}
-Here’s an example of some inline math: $a^2 + b^2 = c^2$.
-
-And here’s an equation on its own:
-
-\[
-	E = mc^2
-\]
-
-\section{Conclusion}
-This section can contain your concluding remarks or summary of the assignment.
+% Content goes here
 
 \end{document}
