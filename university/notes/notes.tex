@@ -11,7 +11,6 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsthm}
-\usepackage{framed}
 \usepackage{float}
 
 % Theorem Environments
@@ -19,25 +18,6 @@
 \newtheorem{definition}{Definition}[subsection]
 \newtheorem{example}{Example}[subsection]
 \newtheorem{theorem}{Theorem}[subsection]
-
-% Redefine the existing theorem environments to be framed
-\let\olddefinition\definition
-\let\endolddefinition\enddefinition
-\renewenvironment{definition}
-  {\begin{framed}\olddefinition}
-  {\endolddefinition\end{framed}}
-
-\let\oldexample\example
-\let\endoldexample\endexample
-\renewenvironment{example}
-  {\begin{framed}\oldexample}
-  {\endoldexample\end{framed}}
-
-\let\oldtheorem\theorem
-\let\endoldtheorem\endtheorem
-\renewenvironment{theorem}
-  {\begin{framed}\oldtheorem}
-  {\endoldtheorem\end{framed}}
 
 % Font setup
 \usepackage{kpfonts}  % Elegant fonts with complete math support
@@ -52,7 +32,7 @@
 }
 
 % Set graphics properties
-\setkeys{Gin}{width=0.75\textwidth}
+\setkeys{Gin}{width=0.5\textwidth}
 
 % Title Information
 \title{Course Title}
